@@ -7,6 +7,22 @@ var solution = function (A) {
     for(num in A){
         res = res ^ A[num];
     }
+
+		// https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Bitwise_Operators#Bitwise_XOR
+		// solution([9,3,9,3,7]) => 7
+		// X^X = 0
+		// 0^X = X
+		//
+		// 9^14 = 7
+		// 7^9 = 14
+		// 7^14 = 9
+		/**
+			a,b,a XOR b
+			0	0	0
+			0	1	1
+			1	0	1
+			1	1	0
+		*/
     return res;
 }
 

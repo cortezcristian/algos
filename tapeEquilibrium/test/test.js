@@ -1,24 +1,14 @@
 var assert = require("assert");
-var CyclicRotation = require("../src/index.js")
+var TapeEquilibrium = require("../src/index.js")
 
-describe("Cyclic Rotation Tests", function(){
-  it("Test CyclicRotation([3, 8, 9, 7, 6], 3) => [9, 7, 6, 3, 8]", function(done){
-    assert.deepEqual(CyclicRotation([3, 8, 9, 7, 6], 3),[9, 7, 6, 3, 8]);
+describe("Tape Equilibrium Tests", function(){
+  it("Test TapeEquilibrium([3, 8, 9, 7, 6], 3) => 7", function(done){
+    assert.deepEqual(TapeEquilibrium([3, 1, 2, 4, 3]), 7);
     done();
   });
 
-  it("Test CyclicRotation([-9, 0], 2) => [-9, 0]", function(done){
-    assert.deepEqual(CyclicRotation([-9, 0], 2),[-9, 0]);
-    done();
-  });
-
-  it("Test CyclicRotation([], 1) => []", function(done){
-    assert.deepEqual(CyclicRotation([], 1), []);
-    done();
-  });
-
-  it("Test CyclicRotation([5, -1000], 1) => [-1000, 5]", function(done){
-    assert.deepEqual(CyclicRotation([5, -1000], 1), [-1000, 5]);
+  it("Test TapeEquilibrium([-1000, 1000]) => 2000", function(done){
+    assert.deepEqual(TapeEquilibrium([-1000, 1000]), 2000);
     done();
   });
 });

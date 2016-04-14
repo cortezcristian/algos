@@ -1,5 +1,5 @@
 var solution = function (A) {
-		// Detected time complexity: O(1)
+		// http://stackoverflow.com/a/19667905/467034
     var min = null, total = 0, acum = 0;
     total = A.reduce(function(a,b){return a+b;});
 

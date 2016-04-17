@@ -5,7 +5,7 @@ var solution = function (A) {
     var left = 0;
     var min = null;
     //console.log(">>", right);
-    for(var i=0;i<A.length;i++){
+    for(var i=0;i<A.length-1;i++){
         left += A[i];
         right -= A[i];
         var res = Math.abs(left - right);
